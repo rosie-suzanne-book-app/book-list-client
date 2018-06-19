@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rosie and Suzanne's Book App</title>
 
-    <script id="book-view-template" type="text/x-handlebars-template">
+    <script id="book-list-template" type="text/x-handlebars-template">
         <section class="clearfix" data-author="{{author}}" data-title="{{title}}">
           <header>
             <h1>{{title}}</h1>
@@ -21,7 +21,7 @@
 
 <body>
     <h1>Rosie and Suzanne's Book App</h1>
-    <section id="view-container" class="tab-content"></section>
+    <section class="tab-content book-list-container"></section>
 
     <section id="about" class="tab-content">
         <header>Welcome to the Book App by Rosie and Suzanne</header>
@@ -29,7 +29,7 @@
     <section><h1>About Rosie:</h1></section>
     </section>
 </body>
-// <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 </body>
