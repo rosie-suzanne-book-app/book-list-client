@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rosie and Suzanne's Book App</title>
+
+    <script id="book-view-template" type="text/x-handlebars-template">
+        <section class="clearfix" data-author="{{author}}" data-title="{{title}}">
+          <header>
+            <h1>{{title}}</h1>
+            <div>By {{author}}</div>
+          </header>
+          <section class="article-description">{{description}}</section>
+          <a href="#" class="read-on">Read on &rarr;</a>
+        </section>
+      </script>
 </head>
+
 <body>
     <h1>Rosie and Suzanne's Book App</h1>
+    <section id="view-container" class="tab-content"></section>
+
+    <section id="about" class="tab-content">
+        <header>Welcome to the Book App by Rosie and Suzanne</header>
+    <section><h1>About Suzanne:</h1></section>
+    <section><h1>About Rosie:</h1></section>
+    </section>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
 </html>
