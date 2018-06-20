@@ -8,29 +8,47 @@
     <title>Rosie and Suzanne's Book App</title>
 
     <script id="book-list-template" type="text/x-handlebars-template">
-        <section class="clearfix" data-author="{{author}}" data-title="{{title}}">
+        <section id="book-view" class="clearfix" data-author="{{author}}" data-title="{{title}}">
           <header>
             <h1>{{title}}</h1>
             <div>By {{author}}</div>
           </header>
-          <section class="article-description">{{description}}</section>
-          <a href="#" class="read-on">Read on &rarr;</a>
+          <img class="image_url" src="http://placehold.it/400x400/000">
+          <section class="book-description">{{description}}</section>
+          <section class="isbn">{{isbn}}</section>
+          <a href="#" class="view-details">View Details</a>
         </section>
-      </script>
+      </script>      
+      <script id="error-template" type="text/x-handlebars-template">
+        <section id="error-view" class="error-message">
+            <h1 id="error-message"> {{err}}</h1>
+        </section></script>
 </head>
 
 <body>
     <h1>Rosie and Suzanne's Book App</h1>
     <section class="tab-content book-list-container"></section>
+    <!-- <section></section> Add a book-->
+    <!-- <section></section> Show one book -->
+    <!-- <section></section> Delete a book -->
+    <!-- <section></section> Update a book -->
+    <!-- <section></section> Admin (passcode) -->
+    <!-- <section></section> Search (Google books API) -->
+    <section class="container error-view"></section>
 
     <section id="about" class="tab-content">
         <header>Welcome to the Book App by Rosie and Suzanne</header>
-    <section><h1>About Suzanne:</h1></section>
-    <section><h1>About Rosie:</h1></section>
+        <section>
+            <h1>About Suzanne:</h1>
+        </section>
+        <section>
+            <h1>About Rosie:</h1>
+        </section>
     </section>
 </body>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 </body>
 
