@@ -1,5 +1,7 @@
 'use strict';
 
+/******** ALL BOOKS ********/
+
 bookView.handleMainNav = () => {
   $('nav').on('click', '.tab', function (e) {
     e.preventDefault();

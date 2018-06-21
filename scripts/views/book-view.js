@@ -1,5 +1,8 @@
 'use strict';
 
+/******** ONE BOOK ********/
+/*Should include bookView.initIndexPage()*/
+
 let bookView = {};
 
 bookView.handleMainNav = () => {
@@ -8,3 +11,11 @@ bookView.handleMainNav = () => {
     $('.tab-content').hide();
     $(`#${$(this).data('content')}`).fadeIn();
   })};
+
+
+function initIndexPage() {
+  $('.container').hide();
+  $('.book-view').show();
+  
+  module.bookView.initIndexPage();
+}
