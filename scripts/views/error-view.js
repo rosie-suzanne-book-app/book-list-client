@@ -1,5 +1,8 @@
 'use strict';
 
+/******** ERROR ********/
+/*Should include errorView.initErrorPage(err)*/
+
 let errorView = {};
 
 module.errorView.initErrorPage(err); // This one line should be in error-view

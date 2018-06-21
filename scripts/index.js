@@ -1,9 +1,13 @@
 'use strict';
 
+/******** THIS FILE IS FOR ********
+configuring
+everything that is needed/shared by all views*/
+
 var app = app || {};
 
-let productionApiUrl = 'https://rosie-suzanne-booklist.herokuapp.com';
-let developmentApiUrl = 'http://localhost:3000';
+let productionApiUrl = `https://rosie-suzanne-booklist.herokuapp.com`;
+let developmentApiUrl = `http://localhost:3000`;
 
 // DONE-TODO: Evaluates environment based on URL in browser. Is set to app.ENVIRONMENT.apiUrl.
 module.isProduction = /^(?!localhost|127)/.test(window.location.hostname);
@@ -17,7 +21,16 @@ module.showOnly = (selector) => {
   $(selector).show(); // Not sure if right
 };
 
-// TODO: Create .render method to compile Handlebars template
-Book.render = () => Handlebars.compile($('#book-view-template').text()); // Not sure if right
+// DONE?(Change)-TODO: Create .render method to compile Handlebars template
+// Book.render = () => Handlebars.compile($('#book-view-template').text()); // Not sure if right
+function (module) {
+  module.render = (templateId, data) => {
+    if (!module.bookViewTemplate) {
+      module.bookViewTemplate = Handlebars.compile($($(`#${templateId}`)).text());
+    }
+    return module.bookViewTemplate(data);
+  };
+}
+
 
 // TODO: Enclose code in IIFE
