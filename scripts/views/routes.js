@@ -6,7 +6,7 @@
 Book.fetchPreview = callback => {
   $.get('http://localhost:3000/api/v1/books')
     .then(results => {
-      Book.loadLimited(results);
+      Book.loadPreview(results);
       callback();
     })
 };
@@ -25,17 +25,17 @@ Book.fetchOne = (id, callback) => {
     })
 };
 
-Book.prototype.postOne = function (callback) {
-    $.post(`http://localhostL:3000/api/v1/books`, {
-        title: this.title;
-        author: this.author;
-        isbn: this.isbn;
-        image_url: this.image_url;
-        description: this.description;
-    })
-    .then(result => {
-        Book.loadLimited(results);
-        callback();
-    })
-}
+// Book.prototype.postOne = function (callback) {
+//     $.post(`http://localhostL:3000/api/v1/books`, {
+//         title: this.title;
+//         author: this.author;
+//         isbn: this.isbn;
+//         image_url: this.image_url;
+//         description: this.description;
+//     })
+//     .then(result => {
+//         Book.loadPreview(results);
+//         callback();
+//     })
+// }
 
