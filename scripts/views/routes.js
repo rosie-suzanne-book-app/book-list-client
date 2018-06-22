@@ -2,6 +2,17 @@
 
 /******** PAGE.JS ROUTING ********/
 
+
+// Set up route to just / and call initIndexPage
+Book.indexPage = callback => {
+  $.get('http://localhost:3000')
+    .then(results => {
+      Book.initIndexPage(results);
+      callback();
+    })
+};
+
+
 // This might be better in book-view.js? Carries over the Book.loadLimited from book.js
 Book.fetchPreview = callback => {
   $.get('http://localhost:3000/api/v1/books')
@@ -10,6 +21,7 @@ Book.fetchPreview = callback => {
       callback();
     })
 };
+
 
 Book.fetchOne = (id, callback) => {
   $.ajax({

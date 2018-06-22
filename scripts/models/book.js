@@ -60,6 +60,9 @@ Book.fetchPreview = callback => {
     })
 }
 
+Book.fetchOne = () => {
+  Book.fetchOne[0]=new Book();
+}
 
 
 // TODO: Enclose code in IIFE
