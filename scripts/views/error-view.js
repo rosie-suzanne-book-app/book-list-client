@@ -5,12 +5,15 @@
 
 let errorView = {};
 
-module.errorView.initErrorPage(err); // This one line should be in error-view
+(function (module) {
 
-function initErrorPage(err) {
-  $('.container').hide();
-  $('.error-view').show();
-  $('#error-message').show();
-  console.error(err);
-  module.errorView.initErrorPage(err);
-}
+  function initErrorPage(err) {
+    $('.container').hide();
+    $('.error-view').show();
+    $('#error-message').show();
+    console.error(err);
+  }
+
+  module.initErrorPage(err);
+
+})(errorView)
