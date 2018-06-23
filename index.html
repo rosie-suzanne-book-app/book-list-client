@@ -10,12 +10,50 @@
     <script id="book-list-template" type="text/x-handlebars-template">
         <book class="clearfix" data-book="{{book}}">
             <header>
+                <img src="{{image_url}}"/>
                 <h2>{{title}}</h2>
             <div>{{author}}</div>
         </header>
-        <img src="{{image_url}}" />
         <description>{{{description}}}</description>
+        </book>
+    </script>
+    <script id="book-one-template" type="text/x-handlebars-template">
+        <book class="clearfix" data-book="{{book}}">
+            <header>
+                <img src="{{image_url}}"/>
+                <h2>{{title}}</h2>
+                <div>{{author}}</div>
+            </header>
+        <div>{{isbn}}</div>
+        <description>{{{description}}}</description>
+        <button id="update-button" class= "buttons" type="submit">UPDATE</button>
+        <button id="delete-button" class= "buttons" type="submit">DELETE</button>
+        </book>
+    </script>
 
+    <script id="add-book-template" type="text/x-handlebars-template">
+        <book class="clearfix" data-book="{{book}}">
+                <form>
+                        <fieldset>
+                            <legend>Add a new book</legend>
+                            <label>Title:
+                                <input id="title" type="text">
+                            </label>
+                            <label>Author:
+                                <input id="author" type="text">
+                            </label>
+                            <label>ISBN:
+                                <input id="isbn" type="number">
+                            </label>
+                            <label>Image URL:
+                                <input id="image-url" type="text">
+                            </label>
+                            <label>Description:
+                                <input id="description" type="text">
+                            </label>
+                            <button id="submit-button" type="submit">SUBMIT</button>
+                        </fieldset>
+                    </form>
         </book>
     </script>
 </head>
@@ -52,6 +90,7 @@
 <script src="./scripts/views/book-view.js"></script>
 <script src="./scripts/models/book-add-view.js"></script>
 <script src="./scripts/views/error-view.js"></script>
+<script src="book-list-server/server.js"></script>
 </body>
 
 </html>
