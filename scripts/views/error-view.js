@@ -7,13 +7,11 @@ let errorView = {};
 
 (function (module) {
 
-  function initErrorPage(err) {
+  function errorPage(err) {
     $('.container').hide();
-    $('.error-view').show();
+    $('.error-view').show();s
     $('#error-message').show();
     console.error(err);
+    module.errorView.initErrorPage(err);
   }
-
-  module.initErrorPage(err);
-
 })(errorView)
